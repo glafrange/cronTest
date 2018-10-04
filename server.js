@@ -3,8 +3,14 @@ const bodyParser = require("body-parser");
 
 const app = express();
 
+const main = require("./router/api/main");
+
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
+
+app.get("/", (req, res) => res.send("Hello"));
+
+app.use("/api/main", main);
 
 const port = process.env.PORT || 5000;
 
