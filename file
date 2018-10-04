@@ -1,0 +1,1 @@
+npm i body-parser express mongoose passport passport-jwt jsonwebtoken validator bcryptjs
